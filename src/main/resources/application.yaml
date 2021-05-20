@@ -1,0 +1,20 @@
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    timeout: 60s
+
+    lettuce:
+      pool:
+        max-active: 32
+        max-wait: 300ms
+        max-idle: 16
+        min-idle: 8
+
+  curator:
+    service: 127.0.0.1:2181
+    retryCount: 5
+    retryTime: 5000
+    sessionTimeout: 5000
+    connectionTimeout: 5000
